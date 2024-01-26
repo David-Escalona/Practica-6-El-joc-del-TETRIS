@@ -304,7 +304,8 @@ export const juego = {
         document.querySelector('#volver').addEventListener('click', () =>{
         document.querySelector('main').innerHTML = home.template
         home.script()
-		})
+		});
+		console.log(tetrisModels);
     }
 }
 
