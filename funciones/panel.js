@@ -1,5 +1,5 @@
-export const panel = {
-    nivel: 1,
+export const panel = { // Exporto un array llamado panel que tiene propiedades
+    nivel: 1, // Creo el nivel 
     tiempo: 10,
     lineas: 0,
     puntos: 0,
@@ -20,7 +20,7 @@ export const panel = {
       console.log(`Lineas ${this.lineas}`);
     },
   
-    addPoints(puntosAñadidos) {
+    Puntos(puntosAñadidos) {
       this.puntos += puntosAñadidos;
       console.log(`Puntos ${this.puntos}`);
     },

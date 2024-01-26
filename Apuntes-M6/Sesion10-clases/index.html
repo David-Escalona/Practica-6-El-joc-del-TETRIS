@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesion 10 Clases</title>
+</head>
+<body>
+    <h1>Sesion 10 - Clases</h1>
+
+    <script>
+        console.log("Hola sesion 10")
+
+        // Crear clase
+        class Personaje{
+
+            constructor(name){
+                console.log('Acabas de crear una instacia');
+                this.nombre = name
+            }
+            
+            vida = 0
+
+            // Metodos
+            saludar(){
+                console.log('Hola, soy '+ this.nombre)
+            }
+        }
+
+        // Creamos una Instancia de la clase personaje
+        const personaje1 = new Personaje('Mario')
+
+        console.log('personaje1 nombre: ',personaje1.nombre);
+        console.log('personaje1 vida: ',personaje1.vida);
+
+        personaje1.saludar()
+
+        const personaje2 = new Personaje('Pepe')
+        personaje2.saludar()
+
+
+        // Crear clase bicho que va a tener dos propiedades nombre y fuerza
+        // y las dos propiedades van a ser instaciadas al crear el objeto
+        // ademas va a tener un metodo llamado aumentarfuerza el cual recibira la cantidad de fuerza que recibira
+        // y crearemos otro metodo mas llamado mostrarFuerza el cual mostrara por pantalla la fuerza que tiene el bicho
+
+        class Bicho{
+
+            constructor(Nombre, Fuerza){
+
+                this.nombre = Nombre
+                this.fuerza = Fuerza
+            }
+            
+            aumentarFuerza(Fuerza){
+                console.log('Hola soy '+ this.nombre +' y ahora tengo mas fuerza: '+ this.fuerza)
+            }
+        }
+
+        const Mosca = new Bicho('Oscar',8)
+        console.log('El Bicho 1 se llama:', Mosca.nombre)
+
+        const MoscaFuerza = new Bicho('Oscar',3)
+        console.log('El', Mosca.nombre ,'tiene', MoscaFuerza.fuerza ,'de fuerza')
+
+        Mosca.aumentarFuerza()
+
+    </script>
+</body>
+</html>
